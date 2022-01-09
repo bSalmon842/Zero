@@ -1,0 +1,293 @@
+Name,Unit,Type,Desc
+SessionTime,s,f64,Seconds since session start
+SessionTick,,s32,Current update number
+SessionNum,,s32,Session number
+SessionState,irsdk_SessionState,s32,Session state
+SessionUniqueID,,s32,Session ID
+SessionFlags,irsdk_Flags,u32,Session flags
+SessionTimeRemain,s,f64,Seconds left till session ends
+SessionLapsRemain,,s32,Old laps left till session ends use SessionLapsRemainEx
+SessionLapsRemainEx,,s32,New improved laps left till session ends
+SessionTimeTotal,s,f64,Total number of seconds in session
+SessionLapsTotal,,s32,Total number of laps in session
+SessionTimeOfDay,s,f32,Time of day in seconds
+RadioTransmitCarIdx,,s32,The car index of the current person speaking on the radio
+RadioTransmitRadioIdx,,s32,The radio index of the current person speaking on the radio
+RadioTransmitFrequencyIdx,,s32,The frequency index of the current person speaking on the radio
+DisplayUnits,,s32,Default units for the user interface 0 = english 1 = metric
+DriverMarker,,b8,Driver activated flag
+PushToPass,,b8,Push to pass button state
+ManualBoost,,b8,Hybrid manual boost state
+ManualNoBoost,,b8,Hybrid manual no boost state
+IsOnTrack,,b8,1=Car on track physics running with player in car
+IsReplayPlaying,,b8,0=replay not playing  1=replay playing
+ReplayFrameNum,,s32,Integer replay frame number (60 per second)
+ReplayFrameNumEnd,,s32,Integer replay frame number from end of tape
+IsDiskLoggingEnabled,,b8,0=disk based telemetry turned off  1=turned on
+IsDiskLoggingActive,,b8,0=disk based telemetry file not being written  1=being written
+FrameRate,fps,f32,Average frames per second
+CpuUsageFG,%,f32,Percent of available tim fg thread took with a 1 sec avg
+GpuUsage,%,f32,Percent of available tim gpu took with a 1 sec avg
+ChanAvgLatency,s,f32,Communications average latency
+ChanLatency,s,f32,Communications latency
+ChanQuality,%,f32,Communications quality
+ChanPartnerQuality,%,f32,Partner communications quality
+CpuUsageBG,%,f32,Percent of available tim bg thread took with a 1 sec avg
+ChanClockSkew,s,f32,Communications server clock skew
+MemPageFaultSec,,f32,Memory page faults per second
+PlayerCarPosition,,s32,Players position in race
+PlayerCarClassPosition,,s32,Players class position in race
+PlayerCarClass,,s32,Player car class id
+PlayerTrackSurface,irsdk_TrkLoc,s32,Players car track surface type
+PlayerTrackSurfaceMaterial,irsdk_TrkSurf,s32,Players car track surface material type
+PlayerCarIdx,,s32,Players carIdx
+PlayerCarTeamIncidentCount,,s32,Players team incident count for this session
+PlayerCarMyIncidentCount,,s32,Players own incident count for this session
+PlayerCarDriverIncidentCount,,s32,Teams current drivers incident count for this session
+PlayerCarWeightPenalty,kg,f32,Players weight penalty
+PlayerCarPowerAdjust,%,f32,Players power adjust
+PlayerCarDryTireSetLimit,,s32,Players dry tire set limit
+PlayerCarTowTime,s,f32,Players car is being towed if time is greater than zero
+PlayerCarInPitStall,,b8,Players car is properly in there pitstall
+PlayerCarPitSvStatus,irsdk_PitSvStatus,s32,Players car pit service status bits
+PlayerTireCompound,,s32,Players car current tire compound
+PlayerFastRepairsUsed,,s32,Players car number of fast repairs used
+CarIdxLap,,s32,Laps started by car index
+CarIdxLapCompleted,,s32,Laps completed by car index
+CarIdxLapDistPct,%,f32,Percentage distance around lap by car index
+CarIdxTrackSurface,irsdk_TrkLoc,s32,Track surface type by car index
+CarIdxTrackSurfaceMaterial,irsdk_TrkSurf,s32,Track surface material type by car index
+CarIdxOnPitRoad,,b8,On pit road between the cones by car index
+CarIdxPosition,,s32,Cars position in race by car index
+CarIdxClassPosition,,s32,Cars class position in race by car index
+CarIdxClass,,s32,Cars class id by car index
+CarIdxF2Time,s,f32,Race time behind leader or fastest lap time otherwise
+CarIdxEstTime,s,f32,Estimated time to reach current location on track
+CarIdxLastLapTime,s,f32,Cars last lap time
+CarIdxBestLapTime,s,f32,Cars best lap time
+CarIdxBestLapNum,,s32,Cars best lap number
+CarIdxTireCompound,,s32,Cars current tire compound
+CarIdxQualTireCompound,,s32,Cars Qual tire compound
+CarIdxQualTireCompoundLocked,,b8,Cars Qual tire compound is locked-in
+CarIdxFastRepairsUsed,,s32,How many fast repairs each car has used
+PaceMode,irsdk_PaceMode,s32,Are we pacing or not
+CarIdxPaceLine,,s32,What line cars are pacing in  or -1 if not pacing
+CarIdxPaceRow,,s32,What row cars are pacing in  or -1 if not pacing
+CarIdxPaceFlags,irsdk_PaceFlags,s32,Pacing status flags for each car
+OnPitRoad,,b8,Is the player car on pit road between the cones
+CarIdxSteer,rad,f32,Steering wheel angle by car index
+CarIdxRPM,revs/min,f32,Engine rpm by car index
+CarIdxGear,,s32,-1=reverse  0=neutral  1..n=current gear by car index
+SteeringWheelAngle,rad,f32,Steering wheel angle
+Throttle,%,f32,0=off throttle to 1=full throttle
+Brake,%,f32,0=brake released to 1=max pedal force
+Clutch,%,f32,0=disengaged to 1=fully engaged
+Gear,,s32,-1=reverse  0=neutral  1..n=current gear
+RPM,revs/min,f32,Engine rpm
+Lap,,s32,Laps started count
+LapCompleted,,s32,Laps completed count
+LapDist,m,f32,Meters traveled from S/F this lap
+LapDistPct,%,f32,Percentage distance around lap
+RaceLaps,,s32,Laps completed in race
+LapBestLap,,s32,Players best lap number
+LapBestLapTime,s,f32,Players best lap time
+LapLastLapTime,s,f32,Players last lap time
+LapCurrentLapTime,s,f32,Estimate of players current lap time as shown in F3 box
+LapLasNLapSeq,,s32,Player num consecutive clean laps completed for N average
+LapLastNLapTime,s,f32,Player last N average lap time
+LapBestNLapLap,,s32,Player last lap in best N average lap time
+LapBestNLapTime,s,f32,Player best N average lap time
+LapDeltaToBestLap,s,f32,Delta time for best lap
+LapDeltaToBestLap_DD,s/s,f32,Rate of change of delta time for best lap
+LapDeltaToBestLap_OK,,b8,Delta time for best lap is valid
+LapDeltaToOptimalLap,s,f32,Delta time for optimal lap
+LapDeltaToOptimalLap_DD,s/s,f32,Rate of change of delta time for optimal lap
+LapDeltaToOptimalLap_OK,,b8,Delta time for optimal lap is valid
+LapDeltaToSessionBestLap,s,f32,Delta time for session best lap
+LapDeltaToSessionBestLap_DD,s/s,f32,Rate of change of delta time for session best lap
+LapDeltaToSessionBestLap_OK,,b8,Delta time for session best lap is valid
+LapDeltaToSessionOptimalLap,s,f32,Delta time for session optimal lap
+LapDeltaToSessionOptimalLap_DD,s/s,f32,Rate of change of delta time for session optimal lap
+LapDeltaToSessionOptimalLap_OK,,b8,Delta time for session optimal lap is valid
+LapDeltaToSessionLastlLap,s,f32,Delta time for session last lap
+LapDeltaToSessionLastlLap_DD,s/s,f32,Rate of change of delta time for session last lap
+LapDeltaToSessionLastlLap_OK,,b8,Delta time for session last lap is valid
+Speed,m/s,f32,GPS vehicle speed
+Yaw,rad,f32,Yaw orientation
+YawNorth,rad,f32,Yaw orientation relative to north
+Pitch,rad,f32,Pitch orientation
+Roll,rad,f32,Roll orientation
+EnterExitReset,,s32,Indicate action the reset key will take 0 enter 1 exit 2 reset
+TrackTemp,C,f32,Deprecated  set to TrackTempCrew
+TrackTempCrew,C,f32,Temperature of track measured by crew around track
+AirTemp,C,f32,Temperature of air at start/finish line
+WeatherType,,s32,Weather type (0=constant  1=dynamic)
+Skies,,s32,Skies (0=clear/1=p cloudy/2=m cloudy/3=overcast)
+AirDensity,kg/m^3,f32,Density of air at start/finish line
+AirPressure,Hg,f32,Pressure of air at start/finish line
+WindVel,m/s,f32,Wind velocity at start/finish line
+WindDir,rad,f32,Wind direction at start/finish line
+RelativeHumidity,%,f32,Relative Humidity
+FogLevel,%,f32,Fog level
+DCLapStatus,,s32,Status of driver change lap requirements
+DCDriversSoFar,,s32,Number of team drivers who have run a stint
+OkToReloadTextures,,b8,True if it is ok to reload car textures at this time
+LoadNumTextures,,b8,True if the car_num texture will be loaded
+CarLeftRight,irsdk_CarLeftRight,u32,Notify if car is to the left or right of driver
+PitsOpen,,b8,True if pit stop is allowed for the current player
+VidCapEnabled,,b8,True if video capture system is enabled
+VidCapActive,,b8,True if video currently being captured
+PitRepairLeft,s,f32,Time left for mandatory pit repairs if repairs are active
+PitOptRepairLeft,s,f32,Time left for optional repairs if repairs are active
+PitstopActive,,b8,Is the player getting pit stop service
+FastRepairUsed,,s32,How many fast repairs used so far
+FastRepairAvailable,,s32,How many fast repairs left  255 is unlimited
+LFTiresUsed,,s32,How many left front tires used so far
+RFTiresUsed,,s32,How many right front tires used so far
+LRTiresUsed,,s32,How many left rear tires used so far
+RRTiresUsed,,s32,How many right rear tires used so far
+LeftTireSetsUsed,,s32,How many left tire sets used so far
+RightTireSetsUsed,,s32,How many right tire sets used so far
+FrontTireSetsUsed,,s32,How many front tire sets used so far
+RearTireSetsUsed,,s32,How many rear tire sets used so far
+TireSetsUsed,,s32,How many tire sets used so far
+LFTiresAvailable,,s32,How many left front tires are remaining  255 is unlimited
+RFTiresAvailable,,s32,How many right front tires are remaining  255 is unlimited
+LRTiresAvailable,,s32,How many left rear tires are remaining  255 is unlimited
+RRTiresAvailable,,s32,How many right rear tires are remaining  255 is unlimited
+LeftTireSetsAvailable,,s32,How many left tire sets are remaining  255 is unlimited
+RightTireSetsAvailable,,s32,How many right tire sets are remaining  255 is unlimited
+FrontTireSetsAvailable,,s32,How many front tire sets are remaining  255 is unlimited
+RearTireSetsAvailable,,s32,How many rear tire sets are remaining  255 is unlimited
+TireSetsAvailable,,s32,How many tire sets are remaining  255 is unlimited
+CamCarIdx,,s32,Active camera's focus car index
+CamCameraNumber,,s32,Active camera number
+CamGroupNumber,,s32,Active camera group number
+CamCameraState,irsdk_CameraState,u32,State of camera system
+IsOnTrackCar,,b8,1=Car on track physics running
+IsInGarage,,b8,1=Car in garage physics running
+SteeringWheelPctTorque,%,f32,Force feedback % max torque on steering shaft unsigned
+SteeringWheelPctTorqueSign,%,f32,Force feedback % max torque on steering shaft signed
+SteeringWheelPctTorqueSignStops,%,f32,Force feedback % max torque on steering shaft signed stops
+SteeringWheelPctDamper,%,f32,Force feedback % max damping
+SteeringWheelAngleMax,rad,f32,Steering wheel max angle
+SteeringWheelLimiter,%,f32,Force feedback limiter strength limits impacts and oscillation
+ShiftIndicatorPct,%,f32,DEPRECATED use DriverCarSLBlinkRPM instead
+ShiftPowerPct,%,f32,Friction torque applied to gears when shifting or grinding
+ShiftGrindRPM,RPM,f32,RPM of shifter grinding noise
+ThrottleRaw,%,f32,Raw throttle input 0=off throttle to 1=full throttle
+BrakeRaw,%,f32,Raw brake input 0=brake released to 1=max pedal force
+HandbrakeRaw,%,f32,Raw handbrake input 0=handbrake released to 1=max force
+SteeringWheelPeakForceNm,N*m,f32,Peak torque mapping to direct input units for FFB
+BrakeABSactive,,b8,true if abs is currently reducing brake force pressure
+EngineWarnings,irsdk_EngineWarnings,u32,Bitfield for warning lights
+FuelLevel,l,f32,Liters of fuel remaining
+FuelLevelPct,%,f32,Percent fuel remaining
+PitSvFlags,irsdk_PitSvFlags,u32,Bitfield of pit service checkboxes
+PitSvLFP,kPa,f32,Pit service left front tire pressure
+PitSvRFP,kPa,f32,Pit service right front tire pressure
+PitSvLRP,kPa,f32,Pit service left rear tire pressure
+PitSvRRP,kPa,f32,Pit service right rear tire pressure
+PitSvFuel,l,f32,Pit service fuel add amount
+PitSvTireCompound,,s32,Pit service pending tire compound
+CarIdxP2P_Status,,b8,Push2Pass active or not
+CarIdxP2P_Count,,s32,Push2Pass count of usage (or remaining in Race)
+ReplayPlaySpeed,,s32,Replay playback speed
+ReplayPlaySlowMotion,,b8,0=not slow motion  1=replay is in slow motion
+ReplaySessionTime,s,f64,Seconds since replay session start
+ReplaySessionNum,,s32,Replay session number
+TireLF_RumblePitch,Hz,f32,Players LF Tire Sound rumblestrip pitch
+TireRF_RumblePitch,Hz,f32,Players RF Tire Sound rumblestrip pitch
+TireLR_RumblePitch,Hz,f32,Players LR Tire Sound rumblestrip pitch
+TireRR_RumblePitch,Hz,f32,Players RR Tire Sound rumblestrip pitch
+SteeringWheelTorque_ST,N*m,f32,Output torque on steering shaft at 360 Hz
+SteeringWheelTorque,N*m,f32,Output torque on steering shaft
+VelocityZ_ST,m/s at 360 Hz,f32,Z velocity
+VelocityY_ST,m/s at 360 Hz,f32,Y velocity
+VelocityX_ST,m/s at 360 Hz,f32,X velocity
+VelocityZ,m/s,f32,Z velocity
+VelocityY,m/s,f32,Y velocity
+VelocityX,m/s,f32,X velocity
+YawRate_ST,rad/s,f32,Yaw rate at 360 Hz
+PitchRate_ST,rad/s,f32,Pitch rate at 360 Hz
+RollRate_ST,rad/s,f32,Roll rate at 360 Hz
+YawRate,rad/s,f32,Yaw rate
+PitchRate,rad/s,f32,Pitch rate
+RollRate,rad/s,f32,Roll rate
+VertAccel_ST,m/s^2,f32,Vertical acceleration (including gravity) at 360 Hz
+LatAccel_ST,m/s^2,f32,Lateral acceleration (including gravity) at 360 Hz
+LongAccel_ST,m/s^2,f32,Longitudinal acceleration (including gravity) at 360 Hz
+VertAccel,m/s^2,f32,Vertical acceleration (including gravity)
+LatAccel,m/s^2,f32,Lateral acceleration (including gravity)
+LongAccel,m/s^2,f32,Longitudinal acceleration (including gravity)
+dcStarter,,b8,In car trigger car starter
+dcPitSpeedLimiterToggle,,b8,In car traction control active
+dpRFTireChange,,f32,Pitstop rf tire change request
+dpLFTireChange,,f32,Pitstop lf tire change request
+dpRRTireChange,,f32,Pitstop rr tire change request
+dpLRTireChange,,f32,Pitstop lr tire change request
+dpFuelFill,,f32,Pitstop fuel fill flag
+dpWindshieldTearoff,,f32,Pitstop windshield tearoff
+dpFuelAddKg,kg,f32,Pitstop fuel add ammount
+dpFastRepair,,f32,Pitstop fast repair set
+dpLFTireColdPress,Pa,f32,Pitstop lf tire cold pressure adjustment
+dpRFTireColdPress,Pa,f32,Pitstop rf cold tire pressure adjustment
+dpLRTireColdPress,Pa,f32,Pitstop lr tire cold pressure adjustment
+dpRRTireColdPress,Pa,f32,Pitstop rr cold tire pressure adjustment
+WaterTemp,C,f32,Engine coolant temp
+WaterLevel,l,f32,Engine coolant level
+FuelPress,bar,f32,Engine fuel pressure
+FuelUsePerHour,kg/h,f32,Engine fuel used instantaneous
+OilTemp,C,f32,Engine oil temperature
+OilPress,bar,f32,Engine oil pressure
+OilLevel,l,f32,Engine oil level
+Voltage,V,f32,Engine voltage
+ManifoldPress,bar,f32,Engine manifold pressure
+RFbrakeLinePress,bar,f32,RF brake line pressure
+RFcoldPressure,kPa,f32,RF tire cold pressure  as set in the garage
+RFtempCL,C,f32,RF tire left carcass temperature
+RFtempCM,C,f32,RF tire middle carcass temperature
+RFtempCR,C,f32,RF tire right carcass temperature
+RFwearL,%,f32,RF tire left percent tread remaining
+RFwearM,%,f32,RF tire middle percent tread remaining
+RFwearR,%,f32,RF tire right percent tread remaining
+LFbrakeLinePress,bar,f32,LF brake line pressure
+LFcoldPressure,kPa,f32,LF tire cold pressure  as set in the garage
+LFtempCL,C,f32,LF tire left carcass temperature
+LFtempCM,C,f32,LF tire middle carcass temperature
+LFtempCR,C,f32,LF tire right carcass temperature
+LFwearL,%,f32,LF tire left percent tread remaining
+LFwearM,%,f32,LF tire middle percent tread remaining
+LFwearR,%,f32,LF tire right percent tread remaining
+RRbrakeLinePress,bar,f32,RR brake line pressure
+RRcoldPressure,kPa,f32,RR tire cold pressure  as set in the garage
+RRtempCL,C,f32,RR tire left carcass temperature
+RRtempCM,C,f32,RR tire middle carcass temperature
+RRtempCR,C,f32,RR tire right carcass temperature
+RRwearL,%,f32,RR tire left percent tread remaining
+RRwearM,%,f32,RR tire middle percent tread remaining
+RRwearR,%,f32,RR tire right percent tread remaining
+LRbrakeLinePress,bar,f32,LR brake line pressure
+LRcoldPressure,kPa,f32,LR tire cold pressure  as set in the garage
+LRtempCL,C,f32,LR tire left carcass temperature
+LRtempCM,C,f32,LR tire middle carcass temperature
+LRtempCR,C,f32,LR tire right carcass temperature
+LRwearL,%,f32,LR tire left percent tread remaining
+LRwearM,%,f32,LR tire middle percent tread remaining
+LRwearR,%,f32,LR tire right percent tread remaining
+RRshockDefl,m,f32,RR shock deflection
+RRshockDefl_ST,m,f32,RR shock deflection at 360 Hz
+RRshockVel,m/s,f32,RR shock velocity
+RRshockVel_ST,m/s,f32,RR shock velocity at 360 Hz
+LRshockDefl,m,f32,LR shock deflection
+LRshockDefl_ST,m,f32,LR shock deflection at 360 Hz
+LRshockVel,m/s,f32,LR shock velocity
+LRshockVel_ST,m/s,f32,LR shock velocity at 360 Hz
+RFshockDefl,m,f32,RF shock deflection
+RFshockDefl_ST,m,f32,RF shock deflection at 360 Hz
+RFshockVel,m/s,f32,RF shock velocity
+RFshockVel_ST,m/s,f32,RF shock velocity at 360 Hz
+LFshockDefl,m,f32,LF shock deflection
+LFshockDefl_ST,m,f32,LF shock deflection at 360 Hz
+LFshockVel,m/s,f32,LF shock velocity
+LFshockVel_ST,m/s,f32,LF shock velocity at 360 Hz

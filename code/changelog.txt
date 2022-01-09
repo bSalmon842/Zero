@@ -1,0 +1,11 @@
+2021-09-03 -> 2021-09-05
+- Tracks are now stored in the 'tracks' folder as separate files
+- Added arrow pointed North to Trackmap
+**********************************************
+2021-09-02 -> 2021-09-03
+- Added Last Lap Sectors to MFD A -> Sectors
+- Drivers now all have individual colours akin to KD Timing
+- Pit Stop Time is now shown and remains until the driver enters Sector 2, the time is calculated from the moment the car is stationary to the moment it sets off
+- Sectors bounds are now shown on the trackmap
+- Windows can now be moved and resized
+**********************************************
